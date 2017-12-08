@@ -50,7 +50,7 @@
     <div class="mdl-card__supporting-text">
        <form action= "analytics.php" method="GET">
          <!--<label for="filter-country"></label>-->
-          <select id="country" name="country"><option value="">Choose a country</option><?php  ?></select>
+          <select id="country" name="country"><option id="opt" value="">Choose a country</option><?php  ?></select>
         
         </form>
         <span id = "result"></span>
@@ -59,10 +59,23 @@
     </div>
     
  <script>
-            document.getElementById("option").addEventListener("click", function(){
+ console.log("before ajax");
+ $(function(){
+            //doesn't go inside
+            $.ajax('Service/service-topCountries.php').then(function(response){
+            console.log(response);
+    
+            console.log("inside ajax");
+    
+            document.getElementById("opt").addEventListener("click", function(){
                 var v = document.querySelector("#country").value;
                 document.querySelector("#result").innerHTML=v;
             });
+});
+});
+ 
+ console.log("after ajax");
+            
         </script>
         
         

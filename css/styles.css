@@ -264,5 +264,8 @@ main header h4 {
 
 .inlinesparkline  {width: 70%;}
 
-
+#map{
+    height:400px;
+    width: 400px;
+}
 

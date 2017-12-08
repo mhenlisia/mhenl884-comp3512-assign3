@@ -81,17 +81,33 @@ include "page-functions/uni-functions.php";
                              echo $string3;
                            ?>
                            
-                           <div id='map'></div>
                            
+                           <script>
+                                // referenced https://developers.google.com/maps/documentation/javascript/ for map code
+                               function initMap(lat, long){
+                                var latitude = parseFloat("<?php echo $latitude ?>");
+                                var longitude = parseFloat("<?php echo $longitude ?>");
+                                var uluru = {lat: latitude, lng: longitude};
+                                var map = new google.maps.Map(document.getElementById('map'), {
+                                zoom: 14,
+                                center: uluru
+                                });
+                                var marker = new google.maps.Marker({
+                                position: uluru,
+                                map: map
+                                });
+                                }
+                           </script>
+                           <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzIctYz_Tgsj-2I7xuE6nd4gkPutMhO6w&callback=initMap"></script>
                            <?php
-                            include "js/map-functions.js";
+                            /*include "js/map-functions.js";
                             echo "<script>";
-                            include "js/map-functions.js";
+                            //include "js/map-functions.js";
                             echo "initMap($latitude, $longitude)";
                             echo "</script>";
                             echo '<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzIctYz_Tgsj-2I7xuE6nd4gkPutMhO6w&callback=initMap("'.$latitude.
                                 '","'.$longitude.'")"></script>';
-                                
+                               */ 
                            ?>
                            
          

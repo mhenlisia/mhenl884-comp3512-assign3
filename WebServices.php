@@ -20,6 +20,8 @@ foreach ($countries as $row){
 }else{
     echo "{'error'}";
 }
+
+
 echo json_encode($countries, JSON_FORCE_OBJECT);
 
 ?>
