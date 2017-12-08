@@ -39,9 +39,14 @@ try {
     }
     
     //Adopted books
+    
+    $string6 = "";
+    $sql5 = "select distinct COUNT(a.AdoptionID), ab.BookID, Quantity, ISBN10, Title, CoverImage From AdoptionBooks AS ab JOIN Books AS b ON (ab.BookID= b.BookID) JOIN Adoptions AS a ON (a.AdoptionID=ab.AdoptionID) GROUP BY a.AdoptionID ORDER BY COUNT(a.AdoptionID) DESC LIMIT 10";
+     $result4 = $db->runDifferentSelect($sql5);
+    foreach($result5 as $row){
+        
+    }
     //thumbnail
-    
-    
     //title
     
     //sum of quantity

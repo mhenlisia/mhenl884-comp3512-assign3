@@ -88,7 +88,7 @@ function printUniversities($rows){
 ?>
 
 <!-- JAVASCRIPT -->
-
+<!--Code modified from modal image obtained from https://www.w3schools.com/howto/howto_js_lightbox.asp -->           
 <script type="text/javascript">
 
 function imgEnlarge(){

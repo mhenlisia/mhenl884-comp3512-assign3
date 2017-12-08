@@ -1,6 +1,6 @@
 <?php 
 //include "session.php";
-//include "Service/service-totals.php";
+//include 'Service/service-totals.php';
 ?>
 
 <!DOCTYPE html>
@@ -47,24 +47,25 @@
   <div class="mdl-card__title mdl-color--purple">
     <h2 class="mdl-card__title-text">Top Views</h2>
   </div>
-  <div class="mdl-card__supporting-text">
-  
+    <div class="mdl-card__supporting-text">
        <form action= "analytics.php" method="GET">
          <!--<label for="filter-country"></label>-->
           <select id="country" name="country"><option value="">Choose a country</option><?php  ?></select>
-          <!-- <input type="submit">-->
+        
         </form>
-        <span id = "result"><span>
-        <script>
+        <span id = "result"></span>
+    </div>
+    
+    </div>
+    
+ <script>
             document.getElementById("option").addEventListener("click", function(){
                 var v = document.querySelector("#country").value;
                 document.querySelector("#result").innerHTML=v;
             });
         </script>
-    </div>
-     
-    </div>
-
+        
+        
     <!--will put into separate horizontal boxes in a bit-->
    <div class="mdl-cell mdl-cell--9-col card-lesson mdl-card  mdl-shadow--2dp">
                 <div class="mdl-card__title mdl-color--purple">

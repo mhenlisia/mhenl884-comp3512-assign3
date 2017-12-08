@@ -1,8 +1,8 @@
 /*global $*/
 $(function()	{
-    $("#country").hover(function()	{
+    $("#country"). click(function() {
 var	url	= "Service/service-topCountries.php";
-$("#result").html("<form> </form>")
+$("#result").html("<form></form>")
   if (status == "success"){ 
     $.get(url,	function (data,	status)	{
     $.each(data, function (index, value){

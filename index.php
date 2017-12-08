@@ -3,16 +3,7 @@
 ?>
 <!DOCTYPE html>
 <html>
-<!--Browse	
-// Universities,	Browse	Books,	Browse	Employees,	and	About	with	links	to	the	appropriate	pages.	
-// It	might	be	nice	to	make	the	cards	include	an	image.	
 
-<!-- <head>
-  <script src="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.min.js"></script>
-  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.blue-orange.min.css">
-  <!-- Material Design icon font -->
- <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-</head> --> 
 <html>
 
 
@@ -110,33 +101,6 @@
   </div>    <!-- / mdl-layout --> 
   </body>
   <!-- Square card 
-  <div class="mdl-card mdl-shadow--2dp demo-card-square">
-    <div class="mdl-card__title mdl-card--expand">
-      <h2 class="mdl-card__title-text">Card 5</h2>
-    </div>
-    <div class="mdl-card__supporting-text">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenan convallis.
-    </div>
-    <div class="mdl-card__actions mdl-card--border">
-      <a class="mdl-button mdl-button--accent mdl-js-button mdl-js-ripple-effect">
-          Action
-        </a>
-    </div>
-  </div>
-  <!-- Square card 
-  <div class="mdl-card mdl-shadow--2dp demo-card-square">
-    <div class="mdl-card__title mdl-card--expand">
-      <h2 class="mdl-card__title-text">Card 6</h2>
-    </div>
-    <div class="mdl-card__supporting-text">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenan convallis.
-    </div>
-    <div class="mdl-card__actions mdl-card--border">
-      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-          Action
-        </a>
-    </div>
-  </div>
-</body>-->
+ 
 
 </html> 

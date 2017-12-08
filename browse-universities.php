@@ -21,7 +21,7 @@ include "page-functions/uni-functions.php";
     
     
     <script   src="https://code.jquery.com/jquery-1.7.2.min.js" ></script>
-    <script src="src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzIctYz_Tgsj-2I7xuE6nd4gkPutMhO6w&callback=initMap></script>   
+    <script type="text/javascript" src="js/map-functions.js"></script>  
     <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
     
 </head>
@@ -80,9 +80,11 @@ include "page-functions/uni-functions.php";
                            <?php   
                              echo $string3;
                            ?>
+                           
                            <div id='map'></div>
                            
                            <?php
+                            include "js/map-functions.js";
                             echo "<script>";
                             include "js/map-functions.js";
                             echo "initMap($latitude, $longitude)";
