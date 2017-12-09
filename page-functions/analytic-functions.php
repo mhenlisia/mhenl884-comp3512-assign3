@@ -44,7 +44,9 @@ try {
     $sql5 = "select distinct COUNT(a.AdoptionID), ab.BookID, Quantity, ISBN10, Title, CoverImage From AdoptionBooks AS ab JOIN Books AS b ON (ab.BookID= b.BookID) JOIN Adoptions AS a ON (a.AdoptionID=ab.AdoptionID) GROUP BY a.AdoptionID ORDER BY COUNT(a.AdoptionID) DESC LIMIT 10";
      $result4 = $db->runDifferentSelect($sql5);
     foreach($result5 as $row){
-        
+        $string6 .= outputThumbnail($row);
+        $string6 .= outputTitle($row);
+        $string6 .= outputQuantity($row);
     }
     //thumbnail
     //title
@@ -61,11 +63,15 @@ function outputCountries($array) {
     
 }
 
-function outputAdoptedBooks($rows){
-   
+function outputThumbnail($rows){
+   return  "<tr><th class='mdl-data-table__cell--non-numeric'><img src ='/book-images/small/" . $rows['ISBN10']. ".jpg'></th>";
 }
-
-
+function outputTitle($rows){
+    return "<th class='mdl-data-table__cell--non-numeric'><h4>".$rows['Title']."</h4></th>";
+}
+function outputQuantity($rows){
+    return "<th class='mdl-data-table__cell--non-numeric'><h4>".$rows['Quantity']."</h4></th></tr>";
+}
 
 
 ?>

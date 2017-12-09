@@ -42,7 +42,6 @@ try{
         $result3 = $db-> runDifferentSelect($sql, "UniversityID", $_GET['id'],1);
         foreach($result3 as $row){
             $string3 .=  outputDetails($row);
-            //$map = 
             $latitude .= $row['Latitude'];
             $longitude .= $row["Longitude"];
             $db = new UniversitiesGateway($connection);
@@ -79,7 +78,7 @@ function createList($rows) {
 
 function outputDetails($rows){
   return "<h2>". $rows["Name"]."</h2>". "<p>" .$rows["Address"]. "<br>" . $rows["City"] . ", " . $rows["State"] . "  ". $rows["Zip"]. 
-   "<br>" . $rows["Website"] . "</p>". "<br><div id='map'></div>";
+   "<br>" . $rows["Website"] . "</p>"."<br><div id='map'></div>";
 }
 
 

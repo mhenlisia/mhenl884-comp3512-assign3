@@ -1,5 +1,6 @@
 <script src="css/styles.css"></script>
 
+
 <?php 
 include 'includes/book-config.inc.php';
 
@@ -87,10 +88,10 @@ function printUniversities($rows){
 
 ?>
 
-<!-- JAVASCRIPT -->
-<!--Code modified from modal image obtained from https://www.w3schools.com/howto/howto_js_lightbox.asp -->           
 <script type="text/javascript">
-
+/* 
+* W3Schools.com "How To - LightBox." obtained from https://www.w3schools.com/howto/howto_js_lightbox.asp, n.d. [November 16,2017] 
+*/
 function imgEnlarge(){
   var mod = document.getElementById('imgzoom');
   var imgurl = document.getElementById('imgg').getAttribute('src');
@@ -108,7 +109,6 @@ function closeimg() {
   var mod = document.getElementById('imgzoom');
   mod.style.display ="none";
 }
-
 </script>
 
 

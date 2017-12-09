@@ -1,8 +1,9 @@
 /*global $*/
+/*global status $*/
 $(function()	{
     $("#country"). click(function() {
 var	url	= "Service/service-topCountries.php";
-$("#result").html("<form></form>")
+$("#result").html("<select></select>")
   if (status == "success"){ 
     $.get(url,	function (data,	status)	{
     $.each(data, function (index, value){

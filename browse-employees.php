@@ -154,7 +154,11 @@ include "page-functions/employee-functions.php";
                     
                 <!--<a class="mdl-button mdl-button--accent mdl-js-button mdl-js-ripple-effect"> -->   
         
+        
         <!-- Filter -->
+<!--         
+* W3Schools.com "How To - Toggle Hide/Show." obtained from https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp, n.d. [November 13,2017] 
+-->
         <button onclick="switchFunction()">View/Hide Filters</button>
         <div id="filter" style="display:none;">
         <!-- cant do both-->

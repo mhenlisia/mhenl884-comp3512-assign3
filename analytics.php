@@ -59,22 +59,27 @@
     </div>
     
  <script>
- console.log("before ajax");
  $(function(){
-            //doesn't go inside
-            $.ajax('Service/service-topCountries.php').then(function(response){
-            console.log(response);
-    
-            console.log("inside ajax");
-    
-            document.getElementById("opt").addEventListener("click", function(){
-                var v = document.querySelector("#country").value;
-                document.querySelector("#result").innerHTML=v;
-            });
-});
-});
- 
- console.log("after ajax");
+            
+        	var url = "Service/service-topCountries.php";
+        	console.log("in func");
+        	
+        	    $.get(url, function(data, status){
+        	    
+        	    console.log("in get");
+	        	//var list = "";
+	        	//loop
+	        	for (var i=0; i < data.length; i++){
+	        	 $('select').append('<option value='+i+'>'+ data[i].CountryName +'</option>');    
+	        	}    
+	        	//list += data[i].CountryName + "<br>";
+	        	
+	        	//$("option").html(list);
+	        	});
+	        	
+	        	console.log("done");
+	        
+        });
             
         </script>
         
@@ -93,7 +98,7 @@
                                   <thead>
                                     <tr>
                                       <th class="mdl-data-table__cell--non-numeric"><i class="material-icons">people_outline</i> Total Visits in June 
-                                         <div class="mdl-card__supporting-text"><?php  echo $string2  ?></div>
+                                         <div class="mdl-card__supporting-text"><?php  include 'service/service-totals.php'  ?></div>
                                        </th>   
                                        
                                       <th class="mdl-data-table__cell--non-numeric"><i class="material-icons">public</i> Number of countries
@@ -145,8 +150,8 @@
                                   
                                   <tbody>
                                    
-                                    <?php /*  display TODOs  */ 
-                                        echo $string5;
+                                    <?php  
+                                        echo $string6;
                                     
                                     ?>
                             

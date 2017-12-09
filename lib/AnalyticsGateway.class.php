@@ -13,7 +13,9 @@ class AnalyticsGateway extends TableDataGateway {
  * @return      the query results
  */
  protected function getSelectStatement() {
- return "SELECT EmployeeID, FirstName, LastName, Address, City, Region, Country, Postal, Email FROM Employees ORDER BY LastName, FirstName ASC";
+ //return "SELECT EmployeeID, FirstName, LastName, Address, City, Region, Country, Postal, Email FROM Employees ORDER BY LastName, FirstName ASC";
+ return "Select distinct VisitID, CountryName, bv.CountryCode from BookVisits AS bv JOIN Countries on Countries.CountryCode = bv.CountryCode group by  bv.CountryCode LIMIT 15";
+
  }
 
 /** 
@@ -25,9 +27,15 @@ class AnalyticsGateway extends TableDataGateway {
  }
  
  protected function getPrimaryKeyName() {
- return "VisitID";
+ return 'VisitID';
  }
  
+}
+
+?>
+
+
+
 /*public function retrieveVisits(){
  return $this->runDifferentSelect("Select VisitID, CountryName from BookVisits JOIN Countries on Countries.CountryCode = BookVisits.CountryCode LIMIT 15");
 }
@@ -51,6 +59,6 @@ public function retrieveMessages(){
 public function retrieveToDo(){
  return $this->runDifferentSelect("SELECT COUNT( * ) AS  `todocount` FROM EmployeeToDo WHERE  `DateBy` >  '2017-06-01*' AND  `DateBy` <  '2017-06-31*'");
 }*/
-}
 
-?>
+
+

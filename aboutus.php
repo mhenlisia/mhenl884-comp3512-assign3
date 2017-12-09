@@ -123,7 +123,7 @@ include "session.php";
                   </tr>
                   <tr>
                     <td>GitHub</td>
-                    <td><a href="https://github.com/mhenlisia/mhenl884-comp3512-assign2"target="_blank"> Click Here</a></td>
+                    <td><a href="https://github.com/mhenlisia/mhenl884-comp3512-assign3"target="_blank"> Click Here</a></td>
                   </tr>
                   <tr>
                     <td>Image: About</td>
