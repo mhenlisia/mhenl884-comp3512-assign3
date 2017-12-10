@@ -2,7 +2,6 @@
 <!-- STILL NEEDS ERROR MESSAGE-->
 
 <?php include  'includes/book-config.inc.php';
-// this PHP will insert register form into table
 session_start(); 
 ini_set('display_errors','1');
 ini_set('error_reporting',E_ALL);
@@ -25,10 +24,8 @@ if (isset($_POST['submit'])) {
     $Phone = $_POST['Phone'];
     $Email = $_POST['Email'];
     $pass = $_POST['pass'];
-    
 
     $Salt = md5(microtime());
-    
     $Password = md5($pass . $Salt);
     $DateJoined = date("Y-m-d H:i:s");
     $DateLastModified = date("Y-m-d H:i:s");
@@ -38,18 +35,13 @@ if (isset($_POST['submit'])) {
     $chck = $pdo->prepare($check);
     $chck->bindValue(':Email', $Email);
     $chck->execute();
+    $usrx = $chck->fetch();
+    $userex = $usrx['UserName'];
     
     //THIS IS WHERE IT OUTPUTS THE ERROR MESSAGE
     if($chck->rowCount() > 0 /* || $_POST['Email'] == */){
+        
         //echo "error! username already exists!"
-        
-        /*
-        '<script>
-								errorArea.className	=	"visible";
-		</script>';
-        */
-        
-   
         
     } else {
         
@@ -60,10 +52,6 @@ if (isset($_POST['submit'])) {
         ':DateJoined'=>$DateJoined,
         ':DateLastModified'=>$DateLastModified
         ));
-    
-        echo "prepared";
-        echo $DateJoined;
-        echo "executed";
         
         //GET USERID 
         $checkid = "SELECT UserID AS id FROM UsersLogin WHERE UserName = :Email";
@@ -89,13 +77,10 @@ if (isset($_POST['submit'])) {
       ':Phone' => $Phone,
       ':Email' => $Email
       ));
-        echo "entered into db";
     }
 
 } else {
-    
 }
- 
 } catch (PDOException $e){
     echo $e->getMessage();
 }

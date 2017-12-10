@@ -28,7 +28,7 @@ echo json_encode($countries, JSON_FORCE_OBJECT);
 
 
 
-// /*<?php
+<?php
 // include 'includes/book-config.inc.php';
 
 

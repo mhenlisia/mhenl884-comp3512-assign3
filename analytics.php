@@ -97,6 +97,7 @@
     <?php 
     //VARIABLE DECLARATION
     include 'service/service-totals.php';
+    include 'service/service-topAdoptedBooks.php';
     //$total1 = "";
     $string2 = "";
     $string3 = "";
@@ -106,9 +107,9 @@
     ?>
 
     <!--will put into separate horizontal boxes in a bit-->
-   <div class="mdl-cell mdl-cell--9-col card-lesson mdl-card  mdl-shadow--2dp">
+   <div class="mdl-cell mdl-cell--10-col card-lesson mdl-card  mdl-shadow--2dp">
                 <div class="mdl-card__title mdl-color--purple">
-                  <h2 class="mdl-card__title-text">Country Statistics</h2>
+                  <h2 class="mdl-card__title-text">Country Statistics: June 2017</h2>
                 </div>
                 <div class="mdl-card__supporting-text">
                 <ul class="demo-list-item mdl-list" style="height:125px; ">
@@ -118,20 +119,20 @@
              <table class="mdl-data-table  mdl-shadow--2dp">
                                   <thead>
                                     <tr>
-                                      <th class="mdl-data-table__cell--non-numeric"><i class="material-icons">people_outline</i> Total Visits in June 
+                                      <th class="mdl-data-table__cell--non-numeric"><i class="material-icons">people_outline</i> Total Visits 
                                          <div class="mdl-card__supporting-text"><?php echo $servtotal1;    ?></div>
                                        </th>   
                                        
                                       <th class="mdl-data-table__cell--non-numeric"><i class="material-icons">public</i> Number of countries
-                                      <div class="mdl-card__supporting-text"><?php echo $servtotal2;   ?></div>
+                                      <div class="mdl-card__supporting-text"><?php echo $servtotal5;   ?></div>
                                       </th>
                                       
                                       <th class="mdl-data-table__cell--non-numeric"><i class="material-icons">format_list_numbered</i> Total ToDos
-                                      <div class="mdl-card__supporting-text"><?php  echo $servtotal3 ?></div>
+                                      <div class="mdl-card__supporting-text"><?php  echo $servtotal2 ?></div>
                                       </th>
                                       
                                       <th class="mdl-data-table__cell--non-numeric"><i class="material-icons">mail_outline</i> Total Messages
-                                      <div class="mdl-card__supporting-text"><?php  echo $servtotal4  ?></div>
+                                      <div class="mdl-card__supporting-text"><?php  echo $servtotal3  ?></div>
                                       </th>
                                     </tr>
                                   </thead>
@@ -174,11 +175,10 @@
                                   <tbody>
                     
                                     <?php 
-                                    //include 'service/service-topAdoptedBooks.php'
-                                        //echo $servResult1;
-                                        include 'analytic-functions.php';
-                                        echo $string6;
-                                       
+                                    
+                                        //echo $string6;
+                                        
+                                        echo $servresult;
                                     
                                     ?>
                             

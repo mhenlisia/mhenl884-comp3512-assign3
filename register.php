@@ -53,28 +53,33 @@
 		</div>
 	</main>
 </div>
-      
+    <?php
+		$eminput = $_POST['Email'];
+		$userex;
+		if ($userex == $eminput){
+			echo "error!";
+			return false;
+		}
+		?>
+		
+		
 		</div>
 		
-		
-		
-		
-		
-		
-		<script>
-		
 
+
+		<script>
+	
+// ----- password highlighting ----- //
     var pass1 = document.getElementById('pass');
     var pass2 = document.getElementById('conf');
     var message = document.getElementById('mess');
     var correct = "#ace1af";
     var mismatch = "#ffb7c5";
-
+   
 
 $(document).ready(function() {
   $("#conf").keyup(validate);
 });
-
 
 function validate() {
   var password1 = $("#pass").val();
@@ -90,55 +95,42 @@ function validate() {
     }	
 }
 
+// ----- password validation ----- //
+$("#reg").on("submit", function(e){
+		var password1 = $("#pass").val();
+  	var password2 = $("#conf").val();
+  		if (password1 != password2){
+  		e.preventDefault();
+  	}
+});
+
+	
+
+			
 
 
 
 
-
-
-		
+// ----- active input highlighting ----- //
 function	setBackground(e)	{
 				if	(e.type	==	"focus")	{
 							e.target.classList.toggle('highlight');
 				}
 				else	if	(e.type	==	"blur")	{
 								e.target.classList.toggle('highlight');
-								//checkForEmptyFields(e);
-								
 				}
 }
 
-//PASSWORD VALIDATION
-$("#reg").on("submit", function(e){
-		var password1 = $("#pass").val();
-  	var password2 = $("#conf").val();
-  	
-  		if (password1 != password2){
-
-  		e.preventDefault();
-  	}
-});
-	  
-  
-
-
-
-
-
 
 window.addEventListener("load",	function(){
-				var	cssSelector	=	"input[type=text]";
+				var	cssSelector	=	"input[type=text], input[type=email], input[type=password]";
 				var	fields	=	document.querySelectorAll(cssSelector);
 				for	(var i=0;	i<fields.length;	i++)
 				{
 								
 								fields[i].addEventListener("focus",	setBackground);
 								fields[i].addEventListener("blur",	setBackground);
-								
-								
 				}
-				
-
 });
 
 
