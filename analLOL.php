@@ -125,7 +125,7 @@
                                   <tbody>
                                    
                                     <?php /*  display TODOs  */ 
-                                        echo $string5;
+                                        
                                     
                                     ?>
                             

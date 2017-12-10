@@ -8,7 +8,7 @@ $sql = "Select distinct VisitID, CountryName, BookVisits.CountryCode from BookVi
 //$db = "Select distinct VisitID, CountryName from BookVisits JOIN Countries on Countries.CountryCode = BookVisits.CountryCode group by  BookVisits.CountryCode";
 $countries = $db->runDifferentSelect($sql);
 var_dump($countries);
-foreach ($countries as $row){
+    foreach ($countries as $row) {
         $string .= outputCountries($row);
     }
      //print_r($arr);        
@@ -45,4 +45,4 @@ echo json_encode($countries, JSON_FORCE_OBJECT);
 // echo json_encode($countries, JSON_FORCE_OBJECT);
 
 
-// ?>*/
+// ?>

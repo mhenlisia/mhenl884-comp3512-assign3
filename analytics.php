@@ -102,6 +102,7 @@
     $string3 = "";
     $string4 = "";
     $string5 = "";
+    $string6 = "";
     ?>
 
     <!--will put into separate horizontal boxes in a bit-->
@@ -126,11 +127,11 @@
                                       </th>
                                       
                                       <th class="mdl-data-table__cell--non-numeric"><i class="material-icons">format_list_numbered</i> Total ToDos
-                                      <div class="mdl-card__supporting-text"><?php  echo $string4  ?></div>
+                                      <div class="mdl-card__supporting-text"><?php  echo $servtotal3 ?></div>
                                       </th>
                                       
                                       <th class="mdl-data-table__cell--non-numeric"><i class="material-icons">mail_outline</i> Total Messages
-                                      <div class="mdl-card__supporting-text"><?php  echo $string5  ?></div>
+                                      <div class="mdl-card__supporting-text"><?php  echo $servtotal4  ?></div>
                                       </th>
                                     </tr>
                                   </thead>
@@ -139,6 +140,7 @@
                                   <tbody>
                                    
                                     <?php /*  display TODOs  */ 
+                                        
                                         echo $string5;
                                     
                                     ?>
@@ -158,6 +160,7 @@
                 </div>
                 <div class="mdl-card__supporting-text"> 
                 
+                 <div class="mdl-tabs__panel" id="books-panel">
                  <table class="mdl-data-table  mdl-shadow--2dp">
                                   <thead>
                                     <tr>
@@ -169,9 +172,13 @@
                                   
                                   
                                   <tbody>
-                                   
-                                    <?php /*  display TODOs  */ 
-                                        echo $string5;
+                    
+                                    <?php 
+                                    //include 'service/service-topAdoptedBooks.php'
+                                        //echo $servResult1;
+                                        include 'analytic-functions.php';
+                                        echo $string6;
+                                       
                                     
                                     ?>
                             

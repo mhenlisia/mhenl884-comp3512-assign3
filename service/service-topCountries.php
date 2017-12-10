@@ -1,5 +1,4 @@
 
-
 <?php
 
 try {
@@ -31,7 +30,8 @@ foreach ($countries as $row) {
 //}else{
 //    echo "{'error'}";
 //}
-} catch (PDOException $e) {
+} 
+catch (PDOException $e) {
     die($e->getMessage());
 }
 

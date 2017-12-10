@@ -40,8 +40,8 @@
 						<label>Postal code:</label> <input type="text" name="Postal" class="hifield"><br/><br/>
 						<label>Phone:</label> <input type="number" name="Phone" class="hifield"><br/><br/>
 						<label>Email:</label> <input type="email" name="Email" class="required hifield" id="em" pattern="([A-Za-z0-9_\.\-])+@[\w]+\.[\w]{2,6}" title="format: abc@x.yz"><br/><br/>
-						<label>Password:</label> <input type="password" name="pass" id="pass" class="hifield"><br/><br/>
-						<label>Re-enter Password:</label> <input type="password" name="conf" id="conf" class="hifield"><br/><br/>
+						<label>Password:</label> <input type="password" name="pass" id="pass" class="required hifield"><br/><br/>
+						<label>Re-enter Password:</label> <input type="password" name="conf" id="conf" class="required hifield"><br/><br/>
 						<span id="mess" class="mess"></span>
 						<br/>
 						<div class="mdl-card__actions mdl-card--border">
@@ -90,6 +90,12 @@ function validate() {
     }	
 }
 
+
+
+
+
+
+
 		
 function	setBackground(e)	{
 				if	(e.type	==	"focus")	{
@@ -101,6 +107,22 @@ function	setBackground(e)	{
 								
 				}
 }
+
+//PASSWORD VALIDATION
+$("#reg").on("submit", function(e){
+		var password1 = $("#pass").val();
+  	var password2 = $("#conf").val();
+  	
+  		if (password1 != password2){
+
+  		e.preventDefault();
+  	}
+});
+	  
+  
+
+
+
 
 
 
@@ -137,9 +159,13 @@ function	checkForEmptyFields(e)	{
 	var	fields	=	document.querySelectorAll(cssSelector);
 //	loop	thru	the	input	elements	looking	for	empty	values
 	var	fieldList	=	[];
+	
+
+
+  
 	for	(var i=0;	i<fields.length;	i++)	{
 		//if (document.getElementsByClassName('hilightable').classList.contains("required")){
-		if	(fields[i].classList.contains('required') && fields[i].value	==	null || fields[i].classList.contains('required') && fields[i].value	==	"")	{
+		if	(fields[i].classList.contains('required') && fields[i].value	==	null || fields[i].classList.contains('required') && fields[i].value	==	"" )	{
 		//	since	a	field	is	empty	prevent	the	form	submission
 			e.preventDefault();
 			//fieldList.push( fields[i]);
