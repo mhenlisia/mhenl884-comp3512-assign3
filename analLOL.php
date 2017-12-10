@@ -1,7 +1,6 @@
 <?php 
-//include 'includes/book-config.inc.php';
 //include "session.php";
-//include "Service/service-totals.php";
+//include 'Service/service-totals.php';
 ?>
 
 <!DOCTYPE html>
@@ -9,6 +8,7 @@
   
   <head>
     <title>Analytics</title>
+  <!-- test test -->
   
    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 
@@ -47,18 +47,19 @@
   <div class="mdl-card__title mdl-color--purple">
     <h2 class="mdl-card__title-text">Top Views</h2>
   </div>
-  <div class="mdl-card__supporting-text">
-  
+    <div class="mdl-card__supporting-text">
        <form action= "analytics.php" method="GET">
          <!--<label for="filter-country"></label>-->
-          <select id="country" name="country"><option id="opt" value=" 
-          
-
-          ">Choose a country</option></select>
-          
-           <script>
-           
-        $(function(){
+          <select id="country" name="country"><option id="opt" value="">Choose a country</option><?php  ?></select>
+        
+        </form>
+        <span id = "result"></span>
+    </div>
+    
+    </div>
+    
+ <script>
+ $(function(){
             
         	var url = "service/service-topCountries.php";
         	console.log("in func");
@@ -79,31 +80,16 @@
 	        	console.log("done");
 	        
         });
-           
-           
-        
             
         </script>
-        </form>
-        <span id = "result"><span>
-       
-       
-       
-    </div>
-     
-    </div>
-    
-    
-    <?php 
+        
+<?php 
     //VARIABLE DECLARATION
-    include 'service/service-totals.php';
-    //$total1 = "";
     $string2 = "";
     $string3 = "";
     $string4 = "";
     $string5 = "";
-    ?>
-
+    ?>        
     <!--will put into separate horizontal boxes in a bit-->
    <div class="mdl-cell mdl-cell--9-col card-lesson mdl-card  mdl-shadow--2dp">
                 <div class="mdl-card__title mdl-color--purple">
@@ -118,11 +104,11 @@
                                   <thead>
                                     <tr>
                                       <th class="mdl-data-table__cell--non-numeric"><i class="material-icons">people_outline</i> Total Visits in June 
-                                         <div class="mdl-card__supporting-text"><?php echo $servtotal1;    ?></div>
+                                         <div class="mdl-card__supporting-text"><?php  include 'service/service-totals.php'   ?></div>
                                        </th>   
                                        
                                       <th class="mdl-data-table__cell--non-numeric"><i class="material-icons">public</i> Number of countries
-                                      <div class="mdl-card__supporting-text"><?php echo $servtotal2;   ?></div>
+                                      <div class="mdl-card__supporting-text"><?php echo $string3   ?></div>
                                       </th>
                                       
                                       <th class="mdl-data-table__cell--non-numeric"><i class="material-icons">format_list_numbered</i> Total ToDos
@@ -170,8 +156,8 @@
                                   
                                   <tbody>
                                    
-                                    <?php /*  display TODOs  */ 
-                                        echo $string5;
+                                    <?php  
+                                        echo $string6;
                                     
                                     ?>
                             

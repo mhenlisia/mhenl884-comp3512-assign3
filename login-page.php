@@ -45,7 +45,10 @@ include 'login.php';
                                 <input name="submit" type="submit" value=" Login ">
                                 <span><?php echo $error; ?></span>
                             </form>
-                        </div>
+                </div>
+                <p>
+                    <a href = "register.php">Register to Create Account</a>
+                </p>
 		    </div>
 		</div>
 		

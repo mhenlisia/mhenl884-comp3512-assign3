@@ -1,3 +1,5 @@
+<!-- NEEDS REDIRECTION AFTER REGISTER-->
+<!-- STILL NEEDS ERROR MESSAGE-->
 
 <?php include  'includes/book-config.inc.php';
 // this PHP will insert register form into table
@@ -37,15 +39,12 @@ if (isset($_POST['submit'])) {
     $chck->bindValue(':Email', $Email);
     $chck->execute();
     
-    if($chck->rowCount() > 0){
-
-       
-        //"error! username already exists!"
+    //THIS IS WHERE IT OUTPUTS THE ERROR MESSAGE
+    if($chck->rowCount() > 0 /* || $_POST['Email'] == */){
+        //echo "error! username already exists!"
         
-        echo "error";  
         /*
         '<script>
-        
 								errorArea.className	=	"visible";
 		</script>';
         */
